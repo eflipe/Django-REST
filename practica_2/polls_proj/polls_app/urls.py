@@ -7,7 +7,7 @@ router = DefaultRouter()
 router.register('polls', PollViewSet, basename='polls')
 
 urlpatterns = [
-    path("login/", LoginView.as_view(), name="login"), 
+    path("login/", LoginView.as_view(), name="login"),
     path("polls/", PollList.as_view(), name="polls_list"),
     path("polls/<int:pk>/", PollDetail.as_view(), name="polls_detail"),
     path("polls/<int:pk>/choices/", ChoiceList.as_view(), name="choice_list"),
