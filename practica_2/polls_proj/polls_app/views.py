@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate
 
 from .models import Poll, Choice
 from .serializers import PollSerializer, ChoiceSerializer,\
-    UserSerializer #VoteSerializer,
+    VoteSerializer, UserSerializer
 
 
 class PollList(generics.ListCreateAPIView):
@@ -32,12 +32,12 @@ class CreateVote(APIView):
     def post(self, request, pk, choice_pk):
         voted_by = request.data.get("voted_by")
         data = {'choice': choice_pk, 'poll': pk, 'voted_by': voted_by}
-        # serializer = VoteSerializer(data=data)
-        # if serializer.is_valid():
-        #     vote = serializer.save()
-        #     return Response(serializer.data, status=status.HTTP_201_CREATED)
-        # else:
-        #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        serializer = VoteSerializer(data=data)
+        if serializer.is_valid():
+            vote = serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class PollViewSet(viewsets.ModelViewSet):
