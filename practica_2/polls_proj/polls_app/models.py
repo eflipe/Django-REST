@@ -8,6 +8,7 @@ class Poll(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     pub_date = models.DateTimeField(auto_now=True)
 
+
     class Meta:
         verbose_name = 'Poll'
         verbose_name_plural = 'Polls'
