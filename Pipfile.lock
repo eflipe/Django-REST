@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "32f9e78d82cb2a2be294c2c2815bcc799819cff30821f8a4f387f0228d105688"
+            "sha256": "950cff871daa40ee6fcc85c866c86634f18b7af548eaf7bd78a124f89114ef03"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -34,6 +34,13 @@
         "django-polls-app": {
             "path": "./practica_2/django-polls-app/dist/django-polls-app-0.1.tar.gz"
         },
+        "django-templated-mail": {
+            "hashes": [
+                "sha256:8db807effebb42a532622e2d142dfd453dafcd0d7794c4c3332acb90656315f9",
+                "sha256:f7127e1e31d7cad4e6c4b4801d25814d4b8782627ead76f4a75b3b7650687556"
+            ],
+            "version": "==1.1.1"
+        },
         "djangorestframework": {
             "hashes": [
                 "sha256:6dd02d5a4bd2516fb93f80360673bf540c3b6641fec8766b1da2870a5aa00b32",
@@ -41,6 +48,14 @@
             ],
             "index": "pypi",
             "version": "==3.11.1"
+        },
+        "djoser": {
+            "hashes": [
+                "sha256:36e06fdfc429a3aa8647289ee0e50806114d89f781de9245a68c6a44575d1bdd",
+                "sha256:e08570cc691caab6bf708e884b98fe3aeda61d5f84eca2d5781dfd9601ee04cf"
+            ],
+            "index": "pypi",
+            "version": "==2.0.3"
         },
         "pytz": {
             "hashes": [
