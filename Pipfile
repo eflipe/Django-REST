@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = "*"
 djangorestframework = "*"
+django-polls-app = {path = "./practica_2/django-polls-app/dist/django-polls-app-0.1.tar.gz"}
 
 [requires]
 python_version = "3.7"
